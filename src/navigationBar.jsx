@@ -1,7 +1,5 @@
-// import "./navigation-bar.css";
+import { Image, Box, Text } from "@chakra-ui/react";
 
-import { Container, Flex, Spacer, Image, Box, Text } from "@chakra-ui/react";
-import { DiVisualstudio } from "react-icons/di";
 function NavigationBar() {
   const willNameLater = {
     display: "flex",
@@ -52,9 +50,9 @@ function NavigationBar() {
         mt={"32px"}
         ml={"54px"}
       />
-      <Box id="item-container" mt={"40px"} mb={"196px"}>
+      <Box mt={"40px"} mb={"196px"}>
         <Box id="main-list" mb={"32px"}>
-          <Box className="list action dashboard" sx={willNameLater} mb={"20px"}>
+          <Box sx={willNameLater} mb={"20px"}>
             <Box className="samp" sx={commonListStyle}>
               <Image
                 src="./images/dashboard.png"
@@ -67,8 +65,8 @@ function NavigationBar() {
             </Box>
             <Box sx={listArrow}></Box>
           </Box>
-          <Box sx={willNameLater} className="list edit" mb={"20px"}>
-            <Box sx={commonListStyle} className="samp">
+          <Box sx={willNameLater} mb={"20px"}>
+            <Box sx={commonListStyle}>
               <Image
                 src="../images/edit.png"
                 alt="edit icon"
@@ -78,8 +76,8 @@ function NavigationBar() {
             </Box>
             <Box sx={listArrow}></Box>
           </Box>
-          <Box sx={willNameLater} className="list group-icon" mb={"20px"}>
-            <Box sx={commonListStyle} className="samp">
+          <Box sx={willNameLater} mb={"20px"}>
+            <Box sx={commonListStyle}>
               <Image
                 src="../images/group.png"
                 alt="group-icon"
@@ -89,8 +87,8 @@ function NavigationBar() {
             </Box>
             <Box sx={listArrow}></Box>
           </Box>
-          <Box sx={willNameLater} className="list hourglass_empty">
-            <Box sx={commonListStyle} className="samp">
+          <Box sx={willNameLater}>
+            <Box sx={commonListStyle}>
               <Image
                 src="../images/hourglass_empty.png"
                 alt="hourglass_empty"
@@ -101,13 +99,11 @@ function NavigationBar() {
             <Box sx={listArrow}></Box>
           </Box>
         </Box>
-        <Box id="group1" mb={"32px"}>
-          <Text sx={commonTextStyle2} className="text">
-            OTHERS 1
-          </Text>
-          <Box mt={"16px"} className="group">
-            <Box sx={willNameLater} className="list add_a_photo" mb={"20px"}>
-              <Box sx={commonListStyle} className="samp">
+        <Box mb={"32px"}>
+          <Text sx={commonTextStyle2}>OTHERS 1</Text>
+          <Box mt={"16px"}>
+            <Box sx={willNameLater} mb={"20px"}>
+              <Box sx={commonListStyle}>
                 <Image
                   src="../images/add_a_photo.png"
                   alt="add_photo_icon"
@@ -117,8 +113,8 @@ function NavigationBar() {
               </Box>
               <Box sx={listArrow}></Box>
             </Box>
-            <Box sx={willNameLater} className="list delete">
-              <Box sx={commonListStyle} className="samp">
+            <Box sx={willNameLater}>
+              <Box sx={commonListStyle}>
                 <Image
                   sx={commonImgStyle}
                   src="../images/delete.png"
@@ -130,13 +126,11 @@ function NavigationBar() {
             </Box>
           </Box>
         </Box>
-        <Box id="group2">
-          <Text sx={commonTextStyle2} className="text">
-            OTHERS 2
-          </Text>
-          <Box mt={"16px"} className="group">
-            <Box sx={willNameLater} className="list subscriptions" mb={"20px"}>
-              <Box sx={commonListStyle} className="samp">
+        <Box>
+          <Text sx={commonTextStyle2}>OTHERS 2</Text>
+          <Box mt={"16px"}>
+            <Box sx={willNameLater} mb={"20px"}>
+              <Box sx={commonListStyle}>
                 <Image
                   sx={commonImgStyle}
                   src="../images/subscriptions.png"
@@ -146,7 +140,7 @@ function NavigationBar() {
               </Box>
               <Box sx={listArrow}></Box>
             </Box>
-            <Box sx={willNameLater} className="list file_present" mb={"20px"}>
+            <Box sx={willNameLater} mb={"20px"}>
               <Box sx={commonListStyle} className="samp">
                 <Image
                   sx={commonImgStyle}
@@ -157,8 +151,8 @@ function NavigationBar() {
               </Box>
               <Box sx={listArrow}></Box>
             </Box>
-            <Box sx={willNameLater} className="list alarm">
-              <Box sx={commonListStyle} className="samp">
+            <Box sx={willNameLater}>
+              <Box sx={commonListStyle}>
                 <Image
                   sx={commonImgStyle}
                   src="../images/alarm.png"
@@ -171,8 +165,8 @@ function NavigationBar() {
           </Box>
         </Box>
       </Box>
-      <Box sx={willNameLater} className="list profile" alignItems={"center"}>
-        <Box sx={commonListStyle} className="samp">
+      <Box sx={willNameLater} alignItems={"center"}>
+        <Box sx={commonListStyle}>
           <Image
             w={"32px"}
             h={"32px"}
@@ -196,7 +190,6 @@ function NavigationBar() {
           color={"#4d5760"}
           src="../images/more_horiz.png"
           alt="more_icon"
-          className="more-icon"
         />
       </Box>
     </div>

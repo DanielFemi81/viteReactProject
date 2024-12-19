@@ -8,13 +8,10 @@ import {
   UnorderedList,
   ListItem,
   Link,
-  textDecoration,
 } from "@chakra-ui/react";
 
 import DoughnutChart from "./doughnutChart";
-import AreaChartComponent from "./areaChart";
-import NewAreaChart from "./newAreaChart";
-import NewDonutChart from "./newDoughnutChart";
+import NewAreaChart from "./areaChart";
 
 function PageContent() {
   const date = new Date();
@@ -41,14 +38,9 @@ function PageContent() {
         >
           Dashboard
         </Text>
-        <Flex className="analytics" alignItems={"center"} mb={"23px"}>
-          <Box w={"335px"} h={"64px"} className="greetings-container">
-            <Text
-              w={"100%"}
-              lineHeight={"32px"}
-              mb={"10px"}
-              className="greetings"
-            >
+        <Flex alignItems={"center"} mb={"23px"}>
+          <Box w={"335px"} h={"64px"}>
+            <Text w={"100%"} lineHeight={"32px"} mb={"10px"}>
               <span
                 style={{ fontWeight: 700, fontSize: "24px", color: "#131316" }}
               >
@@ -66,7 +58,7 @@ function PageContent() {
               ⛅️
             </Text>
 
-            <Text fontSize={"14px"} lineHeight={"22px"} className="summary">
+            <Text fontSize={"14px"} lineHeight={"22px"}>
               Check out your dashboard summary.
             </Text>
           </Box>
@@ -80,7 +72,6 @@ function PageContent() {
             color={"#ff5403"}
             lineHeight={"22px"}
             fontSize={"14px"}
-            className="analytics-btn"
             _hover={{ backgroundColor: "none" }}
           >
             View analytics
@@ -118,7 +109,7 @@ function PageContent() {
                 All time
               </Link>
             </ListItem>
-            <ListItem sx={listProps} className="list-item">
+            <ListItem sx={listProps}>
               <Link href="#" _hover={{ textDecoration: "none" }}>
                 Custom date
               </Link>
@@ -153,9 +144,9 @@ function PageContent() {
             <NewAreaChart />
           </Box>
         </Box>
-        <Flex className="full-reports">
-          <Box className="location-report" w={"500px"} h={"326px"} p={"24px"}>
-            <Flex mb={"44px"} className="reports">
+        <Flex>
+          <Box w={"500px"} h={"326px"} p={"24px"}>
+            <Flex mb={"44px"}>
               <Text
                 color={"#131316"}
                 fontWeight={700}
@@ -182,12 +173,7 @@ function PageContent() {
             </Flex>
           </Box>
           <Spacer />
-          <Box
-            w={"500px"}
-            h={"326px"}
-            p={"24px"}
-            className="referral-source-report"
-          >
+          <Box w={"500px"} h={"326px"} p={"24px"}>
             <Flex
               style={{
                 display: "flex",

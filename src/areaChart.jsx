@@ -1,62 +1,105 @@
-import {
-  AreaChart,
-  Area,
-  ResponsiveContainer,
-  XAxis,
-  YAxis,
-  Tooltip,
-  // LinearGradient,
-  CartesianGrid,
-} from "recharts";
+import { useState } from "react";
+import Chart from "react-apexcharts";
 
-const Data = [
-  {
-    Date: "18 Dec",
-    info: 1000,
-  },
-  {
-    Date: "19 Dec",
-    info: 800,
-  },
-  {
-    Date: "20 Dec",
-    info: 600,
-  },
-  {
-    Date: "21 Dec",
-    info: 400,
-  },
-  {
-    Date: "22 Dec",
-    info: 200,
-  },
-  {
-    Date: "23 Dec",
-    info: 200,
-  },
-];
-function AreaChartComponent() {
+function NewAreaChart() {
+  const [state, setState] = useState({
+    options: {
+      chart: {
+        id: "basic-bar",
+        toolbar: {
+          show: false,
+        },
+      },
+
+      dataLabels: {
+        enabled: false,
+      },
+      fill: {
+        colors: ["#FF5403"],
+        type: "gradient",
+        gradient: {
+          shadeIntensity: 1,
+          opacityFrom: 0.8,
+          opacityTo: 0,
+          stops: [0, 100],
+        },
+      },
+      xaxis: {
+        categories: [
+          "18 Dec",
+          "19 Dec",
+          "20 Dec",
+          "21 Dec",
+          "22 Dec",
+          "23 Dec",
+        ],
+      },
+    },
+    series: [
+      {
+        name: "series-1",
+        data: [1000, 800, 600, 400, 200, 230],
+      },
+    ],
+  });
   return (
-    <ResponsiveContainer height="100%">
-      <AreaChart height="356px" data={Data}>
-        <YAxis axisLine={false} />
-        <defs>
-          <linearGradient id="color" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="5%" stopColor="#FF540333" stopOpacity={0.8} />
-            <stop offset="95%" stopColor="#FF540333" stopOpacity={0} />
-          </linearGradient>
-        </defs>
-        <XAxis dataKey="Date" />
-        <Tooltip />
-        <CartesianGrid horizontal="true" vertical="" />
-        <Area
-          dataKey="info"
-          stroke="#FF5403"
-          fillOpacity={1}
-          fill="url(#color)"
+    <>
+      <div className="row">
+        {/* <div className="mixed-chart"> */}
+        <Chart
+          options={state.options}
+          series={state.series}
+          type="area"
+          // width="100%"
+          height="356"
         />
-      </AreaChart>
-    </ResponsiveContainer>
+      </div>
+      {/* </div> */}
+    </>
   );
 }
-export default AreaChartComponent;
+export default NewAreaChart;
+
+// import React, { Component } from "react";
+// import Chart from "react-apexcharts";
+// class NewAreaChart extends Component {
+//   constructor(props) {
+//     super(props);
+
+//     this.state = {
+//       options: {
+//         chart: {
+//           id: "basic-bar",
+//         },
+//         xaxis: {
+//           categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999],
+//         },
+//       },
+//       series: [
+//         {
+//           name: "series-1",
+//           data: [30, 40, 45, 50, 49, 60, 70, 91],
+//         },
+//       ],
+//     };
+//   }
+
+//   render() {
+//     return (
+//       <div className="app">
+//         <div className="row">
+//           <div className="mixed-chart">
+//             <Chart
+//               options={this.state.options}
+//               series={this.state.series}
+//               type="bar"
+//               width="500"
+//             />
+//           </div>
+//         </div>
+//       </div>
+//     );
+//   }
+// }
+
+// export default NewAreaChart;
