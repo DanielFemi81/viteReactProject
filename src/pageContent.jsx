@@ -8,6 +8,7 @@ import {
   UnorderedList,
   ListItem,
   Link,
+  textDecoration,
 } from "@chakra-ui/react";
 
 import DoughnutChart from "./doughnutChart";
@@ -80,6 +81,7 @@ function PageContent() {
             lineHeight={"22px"}
             fontSize={"14px"}
             className="analytics-btn"
+            _hover={{ backgroundColor: "none" }}
           >
             View analytics
           </Button>
@@ -88,24 +90,38 @@ function PageContent() {
         <Box className="days-nav">
           <UnorderedList p={0} m={0}>
             <ListItem sx={listProps} className="list-item">
-              <Link href="#">1 Day</Link>
+              <Link href="#" _hover={{ textDecoration: "none" }}>
+                1 Day
+              </Link>
             </ListItem>
             <ListItem sx={listProps} className="list-item">
-              <Link href="#">3 Days</Link>
+              <Link href="#" _hover={{ textDecoration: "none" }}>
+                3 Days
+              </Link>
             </ListItem>
             <ListItem sx={listProps} className="list-item">
-              <Link href="#">7 Days</Link>
+              <Link href="#" _hover={{ textDecoration: "none" }}>
+                7 Days
+              </Link>
             </ListItem>
             <ListItem sx={listProps} className="list-item">
-              <Link href="#">30 Days</Link>
+              <Link href="#" _hover={{ textDecoration: "none" }}>
+                30 Days
+              </Link>
             </ListItem>
             <ListItem className="active list-item" sx={listProps}>
-              <Link href="#" className="active-text">
+              <Link
+                href="#"
+                _hover={{ textDecoration: "none" }}
+                className="active-text"
+              >
                 All time
               </Link>
             </ListItem>
             <ListItem sx={listProps} className="list-item">
-              <Link href="#">Custom date</Link>
+              <Link href="#" _hover={{ textDecoration: "none" }}>
+                Custom date
+              </Link>
             </ListItem>
           </UnorderedList>
         </Box>
