@@ -1,4 +1,16 @@
 import { Image, Box, Text } from "@chakra-ui/react";
+import logo from "./images/mainstack-logo.png";
+import dashboard from "./images/dashboard.png";
+import editIcon from "./images/edit.png";
+import groupIcon from "./images/group.png";
+import hourGlassIcon from "./images/hourglass_empty.png";
+import addPhotoIcon from "./images/add_a_photo.png";
+import deleteIcon from "./images/delete.png";
+import subscriptionIcon from "./images/subscriptions.png";
+import fileIcon from "./images/file_present.png";
+import alarmIcon from "./images/alarm.png";
+import userIcon from "./images/unsplash_F16KPYxfm6s.png";
+import moreIcon from "./images/more_horiz.png";
 
 function NavigationBar() {
   const willNameLater = {
@@ -8,12 +20,12 @@ function NavigationBar() {
   };
 
   const commonListStyle = {
-    display: " flex",
-    marginLeft: " 60px",
-    marginTop: " 4px",
-    paddingTop: " 2px",
-    paddingBottom: " 2px",
-    alignItems: " center",
+    display: "flex",
+    marginLeft: "60px",
+    marginTop: "4px",
+    paddingTop: "2px",
+    paddingBottom: "2px",
+    alignItems: "center",
   };
 
   const commonImgStyle = {
@@ -45,8 +57,9 @@ function NavigationBar() {
   return (
     <div id="navigation-bar">
       <Image
-        src="../images/mainstack-logo.png"
-        className="logo"
+        src={logo}
+        // src="/mainstack-
+        alt="logo"
         mt={"32px"}
         ml={"54px"}
       />
@@ -54,11 +67,7 @@ function NavigationBar() {
         <Box id="main-list" mb={"32px"}>
           <Box sx={willNameLater} mb={"20px"}>
             <Box className="samp" sx={commonListStyle}>
-              <Image
-                src="./images/dashboard.png"
-                alt="Dashboard"
-                sx={commonImgStyle}
-              />
+              <Image src={dashboard} alt="Dashboard" sx={commonImgStyle} />
               <Text sx={commonTextStyle} color={"#ff5403"}>
                 Dashboard
               </Text>
@@ -67,22 +76,14 @@ function NavigationBar() {
           </Box>
           <Box sx={willNameLater} mb={"20px"}>
             <Box sx={commonListStyle}>
-              <Image
-                src="../images/edit.png"
-                alt="edit icon"
-                sx={commonImgStyle}
-              />
+              <Image src={editIcon} alt="edit icon" sx={commonImgStyle} />
               <Text sx={commonTextStyle}>Item 1</Text>
             </Box>
             <Box sx={listArrow}></Box>
           </Box>
           <Box sx={willNameLater} mb={"20px"}>
             <Box sx={commonListStyle}>
-              <Image
-                src="../images/group.png"
-                alt="group-icon"
-                sx={commonImgStyle}
-              />
+              <Image src={groupIcon} alt="group icon" sx={commonImgStyle} />
               <Text sx={commonTextStyle}>Item 2</Text>
             </Box>
             <Box sx={listArrow}></Box>
@@ -90,8 +91,8 @@ function NavigationBar() {
           <Box sx={willNameLater}>
             <Box sx={commonListStyle}>
               <Image
-                src="../images/hourglass_empty.png"
-                alt="hourglass_empty"
+                src={hourGlassIcon}
+                alt="hour glass icon"
                 sx={commonImgStyle}
               />
               <Text sx={commonTextStyle}>Item 3</Text>
@@ -105,8 +106,8 @@ function NavigationBar() {
             <Box sx={willNameLater} mb={"20px"}>
               <Box sx={commonListStyle}>
                 <Image
-                  src="../images/add_a_photo.png"
-                  alt="add_photo_icon"
+                  src={addPhotoIcon}
+                  alt="add photo icon"
                   sx={commonImgStyle}
                 />
                 <Text sx={commonTextStyle}>Item 4</Text>
@@ -115,11 +116,7 @@ function NavigationBar() {
             </Box>
             <Box sx={willNameLater}>
               <Box sx={commonListStyle}>
-                <Image
-                  sx={commonImgStyle}
-                  src="../images/delete.png"
-                  alt="delete_icon"
-                />
+                <Image sx={commonImgStyle} src={deleteIcon} alt="delete icon" />
                 <Text sx={commonTextStyle}>Item 5</Text>
               </Box>
               <Box sx={listArrow}></Box>
@@ -133,7 +130,7 @@ function NavigationBar() {
               <Box sx={commonListStyle}>
                 <Image
                   sx={commonImgStyle}
-                  src="../images/subscriptions.png"
+                  src={subscriptionIcon}
                   alt="subscription_icon"
                 />
                 <Text sx={commonTextStyle}>Item 6</Text>
@@ -142,22 +139,14 @@ function NavigationBar() {
             </Box>
             <Box sx={willNameLater} mb={"20px"}>
               <Box sx={commonListStyle} className="samp">
-                <Image
-                  sx={commonImgStyle}
-                  src="../images/file_present.png"
-                  alt="file_icon"
-                />
+                <Image sx={commonImgStyle} src={fileIcon} alt="file icon" />
                 <Text sx={commonTextStyle}>Item 7</Text>
               </Box>
               <Box sx={listArrow}></Box>
             </Box>
             <Box sx={willNameLater}>
               <Box sx={commonListStyle}>
-                <Image
-                  sx={commonImgStyle}
-                  src="../images/alarm.png"
-                  alt="alarm_icon"
-                />
+                <Image sx={commonImgStyle} src={alarmIcon} alt="alarm icon" />
                 <Text sx={commonTextStyle}>Item 8</Text>
               </Box>
               <Box sx={listArrow}></Box>
@@ -171,16 +160,10 @@ function NavigationBar() {
             w={"32px"}
             h={"32px"}
             borderRadius={"50%"}
-            src="../images/unsplash_F16KPYxfm6s.png"
-            alt="user_icon"
-            className="profile_image"
+            src={userIcon}
+            alt="user icon"
           />
-          <Text
-            sx={commonTextStyle}
-            fontSize={"15px"}
-            lineHeight={"16px"}
-            className="display-name"
-          >
+          <Text sx={commonTextStyle} fontSize={"15px"} lineHeight={"16px"}>
             Blessing Daniels
           </Text>
         </Box>
@@ -188,8 +171,8 @@ function NavigationBar() {
           w={"10.95px"}
           h={"1.67px"}
           color={"#4d5760"}
-          src="../images/more_horiz.png"
-          alt="more_icon"
+          src={moreIcon}
+          alt="more icon"
         />
       </Box>
     </div>

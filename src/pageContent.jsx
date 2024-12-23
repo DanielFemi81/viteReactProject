@@ -10,6 +10,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 
+import infoIcon from "./images/info.png";
 import DoughnutChart from "./doughnutChart";
 import NewAreaChart from "./areaChart";
 
@@ -127,7 +128,7 @@ function PageContent() {
               Page Views
             </Text>
             <Spacer />
-            <Image src="./images/info.png" alt="info icon" />
+            <Image src={infoIcon} alt="info icon" />
           </Flex>
           <Text fontSize={"14px"} lineHeight={"20px"} mb={"24px"}>
             All Time
